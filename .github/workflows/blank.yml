@@ -1,0 +1,13 @@
+name: ci
+on:
+  push:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+jobs:
+  builder:
+    runs-on: windows-11-arm
+    steps:
+        - uses: actions/checkout@v4
+
