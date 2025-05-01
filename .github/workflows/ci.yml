@@ -15,6 +15,6 @@ jobs:
 
       - run: |
           docker build -t hello_docker .
-          docker tag hello_docker ghcr.io/${{ env.image_name }}:${{ github.run_number }}
+          docker tag hello_docker ghcr.io/${{ env.image_name }}2:${{ github.run_number }}
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
-          docker push ghcr.io/${{ env.image_name }}:${{ github.run_number }}
+          docker push ghcr.io/${{ env.image_name }}2:${{ github.run_number }}
